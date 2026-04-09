@@ -1,14 +1,5 @@
 # Pizzario
 
-## Ingredients
-
-Dough:
-
-Flour
-Salt
-Water
-Yeast
-
 ### Pizza:
 
 Dough
@@ -33,23 +24,5 @@ Ham
 Fries
 Turkey
 Corn
-
-
-## Machinery
-
-- Dough Maker
-
-- Saucer
-
-- Slicer
-
-- Cheeser
-
-- Topper
-
-- Oven
-
-- Pizzeria (pizza -> money)
-
 
 Random order generator with predefined orders 
