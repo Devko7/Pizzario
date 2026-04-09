@@ -1,14 +1,15 @@
 #lang racket
-(require raylib/2d/unsafe)
+(require 2htdp/universe)
+(require 2htdp/image)
 
-(InitWindow 960 540 "Pizzario - POPL CS")
+;; State: Number (represents x-position)
+;; render: State -> Image
+(define (render x) (place-image (circle 10 "solid" "red") x 50 (empty-scene 100 100)))
 
-  (let loop ()
-    (when (not (WindowShouldClose))
-      (BeginDrawing)
-      (ClearBackground RAYWHITE)
-      (DrawText "I hate racket" 10 10 20 LIME)
-      (EndDrawing)
-      (loop)))
+;; move: State -> State
+(define (move x) (+ x 1))
 
-  (CloseWindow)
+;; Start game
+(big-bang 0
+  (on-tick move)
+  (to-draw render))
